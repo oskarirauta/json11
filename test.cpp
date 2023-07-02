@@ -63,8 +63,13 @@ JSON11_TEST_CASE(json11_test) {
     const string simple_test =
         R"({"k1":"v1", "k2":42, "k3":["a",123,true,false,null]})";
 
+    json11::Json json_empty;
+
     string err;
     const auto json = Json::parse(simple_test, err);
+
+    std::cout << "json_empty should be empty, json_empty is " << ( json_empty.empty() ? "empty" : "not empty" ) << std::endl;
+    std::cout << "json should nog be empty, json is " << ( json.empty() ? "empty" : "not empty" ) << std::endl;
 
     std::cout << "k1: " << json["k1"].string_value() << "\n";
     std::cout << "k3: " << json["k3"].dump() << "\n";

@@ -152,6 +152,12 @@ public:
     // Return a reference to obj[key] if this is an object, Json() otherwise.
     const Json & operator[](const std::string &key) const;
 
+    // return true if object is empty
+    bool empty() const {
+        return this -> array_items().empty() &&
+               this -> object_items().empty();
+    }
+
     // Serialize.
     void dump(std::string &out) const;
     std::string dump() const {
