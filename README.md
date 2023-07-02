@@ -2,7 +2,10 @@ json11cpp
 ---------
 
 json11cpp is a fork of [dropbox/json11](https://github.com/dropbox/json11) - code is
-exactly the same, Makefile just has been remade to suite my needs better when submoduling.
+almost identical to original, Makefile just has been remade to suite my needs better when submoduling.
+
+other changes:
+ - json object has now empty()
 
 json11
 ------
